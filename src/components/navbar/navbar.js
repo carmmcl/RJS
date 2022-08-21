@@ -1,7 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './navbar.css';
+import './NavBar.css';
+import {CartWidget} from './CartWidget';
 
 function Navegacion() {
   return (
@@ -17,7 +18,9 @@ function Navegacion() {
             <Nav.Link href="#pricing">Recetas</Nav.Link>
             <Nav.Link href="#pricing">Contacto</Nav.Link>
           </Nav>
+          <CartWidget/>
         </Container>
+        
       </Navbar>
       <br />
     </>
