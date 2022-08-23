@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navegacion/>
-     <ItemListContainer/>
+     <ItemListContainer greeting="Productos seleccionados"/>
     
     </div>
   );
