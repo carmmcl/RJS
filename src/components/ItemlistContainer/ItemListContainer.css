@@ -1,4 +1,6 @@
 .titulo {
+        color: pink;
+}
+.body{
     text-align: center;
-    color: pink;
 }

@@ -1,4 +1,4 @@
-import {Card, CardBody, CardTitle, CardHeader, CardFooter, CardText, Button} from 'reactstrap'
+import {Card, CardBody, CardTitle, CardFooter, CardText, Button} from 'reactstrap'
 import { ItemCount } from './ItemCount';
 
 const ItemCard =(props)=>{
