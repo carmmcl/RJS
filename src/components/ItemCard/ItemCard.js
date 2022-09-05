@@ -14,7 +14,7 @@ const ItemCard =(props)=>{
                 }}
             >
                 <img src={img}/>
-                    
+                                    
                 <CardBody>
                     <CardTitle tag="h5">
                         {name}

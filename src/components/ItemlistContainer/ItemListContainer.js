@@ -13,6 +13,7 @@ export const ItemListContainer = (props)=> {
        
    useEffect(()=>{
    
+    setLoading(true) 
        getData ()
        .then(res => {
         if(!categoryId) {
