@@ -5,7 +5,8 @@ export const products = [
         description:'Deliciosos cupcakes de vainilla, con relleno de frutas secas y cobertura de crema del cielo.' ,
         img: './assets/foto_cupcake_crema.jpg',
         price:50,
-        stock: 12
+        stock: 12,
+        category:'vainilla'
 
     },
     {
@@ -14,7 +15,8 @@ export const products = [
         description: 'Deliciosos cupcakes de fruta, relleno de dulce de leche y cobertura de crema  chantilly.',
         img: './assets/foto_cupcakefruta.jpg',
         price:50,
-        stock: 12
+        stock: 12,
+        category:'fruta'
     },
     {
         id:3,
@@ -22,16 +24,38 @@ export const products = [
         description:'Deliciosos cupcakes de vainilla, con relleno de dulce de leche o crema y glaseado sabor cereza.' ,
         img: './assets/foto_cupcake_dulce_de_leche.jpg',
         price:50,
-        stock: 5
+        stock: 5,
+        category:'fruta'
 
     },
     {
         id:4,
-        name: 'Cupcakes de dulce de leche',
+        name: 'Cupcakes de Vainilla con dulce de leche',
         description:'Deliciosos cupcakes de chocolate, con relleno de crema chantilly y glaseado sabor cookies.' ,
         img: './assets/foto_cupcake_dulce_de_leche.jpg',
         price:50,
-        stock: 12
+        stock: 12,
+        category:'vainilla'
+
+    },
+    {
+        id:5,
+        name: 'Cupcakes de chocolate',
+        description:'Deliciosos cupcakes de chocolate, con relleno de crema chantilly y glaseado sabor cookies.' ,
+        img: './assets/foto_cupcake_dulce_de_leche.jpg',
+        price:50,
+        stock: 12,
+        category:'chocolate'
+
+    },
+    {
+        id:6,
+        name: 'Cupcakes de chocolate y cookies',
+        description:'Deliciosos cupcakes de chocolate, con relleno de crema chantilly y glaseado sabor cookies.' ,
+        img: './assets/foto_cupcake_dulce_de_leche.jpg',
+        price:50,
+        stock: 12,
+        category:'chocolate'
 
     },
 ]
