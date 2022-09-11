@@ -3,20 +3,20 @@ import './ItemCount.css';
 
 
 
-export const ItemCount =({stock})=>{
+export const ItemCount =({max, counter})=>{
 
-    const [counter, setCounter] = useState (1)
+    
 
     const handleSumar =()=>{
-        if (counter < stock){
-            setCounter (counter+1)
+        if (counter < max){
+          //  setCounter (counter+1)
         }
         
     }
 
     const handleRestar =()=>{
         if (counter>0){
-            setCounter (counter-1)
+           // setCounter (counter-1)
         }
     }
 

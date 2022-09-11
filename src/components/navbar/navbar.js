@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" className='container-navBar'>
+    <Navbar collapseOnSelect expand="lg" variant="dark" className='container-NavBar'>
       <Container className='container-NavBar'>
         <Navbar.Brand href="#home"><img src='./assets/logo2.png'></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

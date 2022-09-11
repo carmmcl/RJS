@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import {Card, CardBody, CardTitle, CardFooter, CardText, Button} from 'reactstrap'
 import { ItemCount } from '../ItemCount/ItemCount';
+ 
 
 const ItemCard =(props)=>{
 
@@ -14,7 +16,7 @@ const ItemCard =(props)=>{
                 }}
             >
                 <img src={img}/>
-                                    
+                                  
                 <CardBody>
                     <CardTitle tag="h5">
                         {name}
@@ -22,7 +24,8 @@ const ItemCard =(props)=>{
                     <CardText>
                         {description}
                     </CardText>
-                    <ItemCount stock ={stock}/>
+                    
+                  {/*}  <ItemCount stock ={stock}/>*/}
                 </CardBody>
                 <CardFooter>
                    $ {price}
