@@ -8,24 +8,32 @@ const ItemDetail =({item}) =>{
     const [cantidad, setCantidad] = useState (1)
 
     const handleAgregar=()=>{
-        console.log(
-            ...item,
-            cantidad,
-        )
+        const itemToCart ={
+            id:item.id,
+            name:item.name,
+            price:item.price,
+            cantidad
+        }
+        
+        console.log({
+            itemToCart
+    })
     }
 
-return(
+    return(
 
-    
+    <>
     <div className="row d-flex justify-content-center">
     <ItemCard  name={item.name} description ={item.description} img={item.img} category={item.category}price={item.price} stock={item.stock}/>
-    
+    </div>
     <ItemCount
         max={item.stock}
         counter={cantidad}
+        setCounter={setCantidad}
+        handleAgregar={handleAgregar}
     />  
 
-</div>
+</>
 
 )
 

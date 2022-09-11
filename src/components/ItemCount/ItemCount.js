@@ -3,20 +3,20 @@ import './ItemCount.css';
 
 
 
-export const ItemCount =({max, counter})=>{
+export const ItemCount =({max, counter, setCounter, handleAgregar})=>{
 
     
 
     const handleSumar =()=>{
         if (counter < max){
-          //  setCounter (counter+1)
+            setCounter (counter+1)
         }
         
     }
 
     const handleRestar =()=>{
         if (counter>0){
-           // setCounter (counter-1)
+            setCounter (counter-1)
         }
     }
 
@@ -25,7 +25,7 @@ return (
         <button onClick={handleRestar} className="botones">-</button>
         <span>{counter}</span>
         <button onClick={handleSumar} className="botones">+</button>
-        <button className="botones">Agregar</button>
+        <button onClick={handleAgregar} className="botones">Agregar</button>
 
      </div>
 
