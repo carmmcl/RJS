@@ -30,8 +30,7 @@ function App() {
         <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
          <Route path='*' element={<Navigate to ='/'/>}/>
         </Routes>
-         
-         
+               
              
           
         {/*<Footer/>*/}
