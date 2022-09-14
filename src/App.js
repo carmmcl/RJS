@@ -7,6 +7,8 @@ import { Contacto } from './components/Contacto/Contacto';
 import { Recetas } from './components/Recetas/Recetas';
 import { ItemListContainer } from './components/ItemlistContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartProvider } from './components/Context/CartContext';
+import { Cart } from './components/Cart/Cart';
 
 
 
@@ -14,12 +16,14 @@ function App() {
 
   return (
     
+      <CartProvider>
       <BrowserRouter>
 
         <NavBar/>
 
         <Routes>
         <Route path='/' element={<ItemListContainer greeting="Productos seleccionados"/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         {/*<Route path='/recetas' element={<Recetas/>}/>
         <Route path='/contacto' element={<Contacto/>}/>*/}
         <Route path='/productos/:categoryId' element={<ItemListContainer greeting="Productos seleccionados"/>}/>
@@ -32,6 +36,7 @@ function App() {
           
         {/*<Footer/>*/}
       </BrowserRouter>
+      </CartProvider>
     
   );
 }

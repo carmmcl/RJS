@@ -3,14 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavBar.css';
-import { CartWidget } from './CartWidget';
-import {Link} from 'react-router-dom'
+import { CartWidget } from '../CartWidget/CartWidget';
+import {Link} from 'react-router-dom';
+
 
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className='container-NavBar'>
       <Container className='container-NavBar'>
-        <Navbar.Brand href="#home"><img src='./assets/logo2.png'></img></Navbar.Brand>
+      <Navbar.Brand as={Link} to={"/"}><img src='/assets/logo2.png'></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
