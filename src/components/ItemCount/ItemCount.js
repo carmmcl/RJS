@@ -22,9 +22,9 @@ export const ItemCount =({max, counter, setCounter, handleAgregar})=>{
 
 return (
      <div className="botonera">
-        <button onClick={handleRestar} className="botones">-</button>
+        <button onClick={handleRestar} disabled={counter === 1}className="botones">-</button>
         <span>{counter}</span>
-        <button onClick={handleSumar} className="botones">+</button>
+        <button onClick={handleSumar} className="botones" disabled={counter === max}>+</button>
         <button onClick={handleAgregar} className="botones">Agregar</button>
 
      </div>

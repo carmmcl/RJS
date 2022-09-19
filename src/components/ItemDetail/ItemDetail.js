@@ -48,6 +48,7 @@ const ItemDetail =({item}) =>{
 
     }
 
+{  <Link to="/" className="botones">Volver</Link>}
    {/*} <ItemCount
         max={item.stock}
         counter={cantidad}

@@ -15,7 +15,7 @@ export const Cart =()=>{
             <div className="container-my 5">
                 <h2>No hay productos en tu carrito</h2>
                 <hr/>
-                <Link to="/" className="btn btn-primary">Ir a comprar</Link>
+                <Link to="/" className="botones">Ir a comprar</Link>
             </div>
         )
     }
