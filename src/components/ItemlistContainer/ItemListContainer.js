@@ -3,28 +3,34 @@ import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { getData } from '../../helpers/getData.js'
 import { useParams } from 'react-router-dom'
-
+import {collection, getDocs} from 'firebase/firestore'
+import {db} from '../../firebase/firebaseConfig'
+    
 export const ItemListContainer = (props)=> {
     
     const [productos, setProductos] = useState ([])
     const [loading, setLoading] = useState (true)
     const { categoryId } = useParams ()
-     
-       
+    
+    
    useEffect(()=>{
    
     setLoading(true) 
-       getData ()
-       .then(res => {
-        if(!categoryId) {
-            setProductos(res)
-        }else{
-            setProductos (res.filter((prod)=> prod.category === categoryId))
-        }
+    
+    const productosRef = collection (db, 'productos')
+
+    getDocs (productosRef)
+        .then((resp)=>{
+            const productosDB = resp.docs.map ((doc) => doc.data())
+            console.log (productosDB)
+
+            setProductos (productosDB)
         
-        setLoading(false);
-       })
-       .catch(error=>console.log(error))
+        })
+        .finally (()=>{
+            setLoading (false)
+        })
+       
    },[categoryId])   
    
      return (
