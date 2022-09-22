@@ -21,9 +21,9 @@ export const ItemListContainer = (props)=> {
 
     getDocs (productosRef)
         .then((resp)=>{
-            const productosDB = resp.docs.map ((doc) => doc.data())
-            console.log (productosDB)
-
+            const productosDB = resp.docs.map ((doc) => ({id: doc.id, ...doc.data ()}))
+            
+            
             setProductos (productosDB)
         
         })
