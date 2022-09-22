@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
-import { getData } from '../../helpers/getData.js'
+
 import { useParams } from 'react-router-dom'
-import {collection, getDocs} from 'firebase/firestore'
+import {collection, getDocs, query, where} from 'firebase/firestore'
 import {db} from '../../firebase/firebaseConfig'
     
 export const ItemListContainer = (props)=> {
@@ -18,8 +18,12 @@ export const ItemListContainer = (props)=> {
     setLoading(true) 
     
     const productosRef = collection (db, 'productos')
-
-    getDocs (productosRef)
+    const q = categoryId
+                ?
+                query (productosRef, where ('category','==',  categoryId))
+                :productosRef
+    
+    getDocs (q)
         .then((resp)=>{
             const productosDB = resp.docs.map ((doc) => ({id: doc.id, ...doc.data ()}))
             
