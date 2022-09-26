@@ -47,6 +47,19 @@ const removeItem =(id)=>{
     
   }
 
+    const terminarCompra = (id) =>{
+
+      Swal.fire({
+        title: 'Compra registrada exitosamente',
+        text: `Número de orden: ${id}`,
+        icon: 'success',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Excelente!'
+      }) 
+      setCart ([])
+
+    }
 
     return (
 
@@ -57,7 +70,8 @@ const removeItem =(id)=>{
             cartQuantity,
             cartTotal,
             emptyCart,
-            removeItem
+            removeItem,
+            terminarCompra
           }}>
             {children}
              </CartContext.Provider>
