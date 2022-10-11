@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getData } from "../../helpers/getData";
 import { Spinner } from 'reactstrap'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import {doc, getDoc} from 'firebase/firestore'
@@ -46,13 +45,9 @@ const ItemDetailContainer =() =>{
                  <ItemDetail item={item}/>
     
         }
-        
-
-        </div>
+       </div>
 
     )
-
-
 
 }
 

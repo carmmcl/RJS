@@ -2,3 +2,7 @@
     background-color: pink;
 }
 
+.navHover:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}

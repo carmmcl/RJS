@@ -1,4 +1,9 @@
 .botones{
-    color:pink;
-    background-color:ghostwhite ;
+    color:white;
+    background-color:pink;
+}
+
+.botones:hover{
+    color:white;
+    background-color:#bd7afc ;
 }

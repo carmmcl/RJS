@@ -32,13 +32,12 @@ const removeItem =(id)=>{
   const emptyCart =()=>{
 
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Desea vaciar el carrito?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Sí, vaciar el carrito!'
     }).then((result) => {
       if (result.isConfirmed) {
         setCart([]) 

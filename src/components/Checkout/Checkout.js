@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom"
 import { CartContext } from "../Context/CartContext"
 import {addDoc, collection} from 'firebase/firestore'
 import { db } from "../../firebase/firebaseConfig"
+import './Checkout.css'
 
 
 
@@ -68,40 +69,43 @@ export const Checkout =()=>{
     }
 
     return(
-            <div>
-
-            <h2>Checkout</h2>
-            <hr></hr>
-
+            
+            <div className="container">
+            
             <form onSubmit={handleSubmit}>
+            <h2 className="titleCheckout">Checkout</h2>
                 <input 
                 name="nombre"
                 value={values.nombre}
                 onChange={handleInputForm}
-                type ={'text'} className="my-3 form-control" placeholder="Nombre"/>
+                type ={'text'} className="my-5 form-control" placeholder="Nombre"/>
 
-<input 
+                <input 
                 name="apellido"
                 value={values.apellido}
                 onChange={handleInputForm}
-                type ={'text'} className="my-3 form-control" placeholder="Apellido"/>
+                type ={'text'} className="my-5 form-control" placeholder="Apellido"/>
 
                 <input 
                 name="email"
                 value={values.email}
                 onChange={handleInputForm}
-                type ={'email'} className="my-3 form-control" placeholder="email"/>
+                type ={'email'} className="my-5 form-control" placeholder="email"/>
 
                 <input 
                 name="direccion"
                 value={values.direccion}
                 onChange={handleInputForm}
-                type ={'text'} className="my-3 form-control" placeholder="direccion"/>
+                type ={'text'} className="my-5 form-control w-500" placeholder="Direccion"/>
 
-                <button type="submit" className="btn btn-primary">Enviar</button>
-            </form>
+                <button type="submit" className="btn botones">Enviar</button>
+             </form>
+        <div>
+            <img src="/assets/foto_cupcake_cereza.jpg"/>
+        </div>
+    </div> 
 
-            </div>
+ )
+    }
 
-    )
-}
+     

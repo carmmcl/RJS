@@ -1,8 +1,10 @@
-import ItemCard from "../ItemCard/ItemCard";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
+import './ItemDetail.css';
+import { BiArrowBack } from "react-icons/bi";
+
 
 
 const ItemDetail =({item}) =>{
@@ -27,17 +29,29 @@ const ItemDetail =({item}) =>{
 
     return(
 
-    <>
-    <div className="row d-flex justify-content-center">
-    <ItemCard  name={item.name} description ={item.description} img={item.img} category={item.category}price={item.price} stock={item.stock}/>
-    </div>
+        <div>
+
+        {<BiArrowBack className="arrowcolor"/>  }
+       
+         {<Link to="/" className="linkVolver">Volver</Link>}
+     
+         <div className= "pics container">
+     
+         <div>
+            <img className="col-xs-6 col-md-6 col-lg-10 color p-3 pt-3" src={item.img}/>
+            </div>
+            <div> 
+            <h3 className="title">{item.name}</h3>
+            <p>{item.description}</p>
+            <p>{item.descriptionMore}</p>
+            <p>Precio por unidad: $ {item.price}</p>
+            </div>       
     
-    {/*{isInCart(item.id) &&<p> Item Agregado</p>*/}
 
     {
         isInCart(item.id)
         ?
-        <Link to="/cart" className="btn btn-success my-2">Terminar mi compra</Link>
+        <Link to="/cart" className="btn links">Terminar mi compra</Link>
         :
         <ItemCount
         max={item.stock}
@@ -48,18 +62,13 @@ const ItemDetail =({item}) =>{
 
     }
 
-{  <Link to="/" className="botones">Volver</Link>}
-   {/*} <ItemCount
-        max={item.stock}
-        counter={cantidad}
-        setCounter={setCantidad}
-        handleAgregar={handleAgregar}
-    />  
-<Link to="cart/" className="btn btn-success my-2">Terminar mi compra</Link>*/}
 
-</>
+</div>
+   
+</div>
 
 )
 
 }
+
 export default ItemDetail;

@@ -1,0 +1,66 @@
+.titleCart {
+    text-align: center;
+    color: pink;
+}
+
+.titleProductCart {
+    text-align: center;   
+}
+
+.productInCart{
+    border: 1px solid pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    }
+
+.precioFinal {
+    text-align:center;
+}
+
+.buttonCart{
+    color:whitesmoke;
+    background-color:cyan;   
+}
+
+.buttonCart:hover {
+    color:whitesmoke;
+    background-color:blueviolet;    
+}
+
+.buttonContinue{
+    color:whitesmoke;
+    background-color:pink;      
+}
+
+.buttonContinue:hover {
+    color:whitesmoke;
+    background-color:plum;
+}
+
+.buttonEnd{
+    color:whitesmoke;
+    background-color:plum;      
+}
+
+.buttonEnd:hover {
+    color:whitesmoke;
+    background-color:blueviolet;
+}
+    
+.buttonsCart{
+       margin: 700px;
+    }
+
+  
+
+.linkComprar{
+        color:blueviolet;
+        margin: 700px;
+    }
+
+    .linkComprar:hover {
+        color:pink;
+    }
+    

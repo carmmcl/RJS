@@ -1,0 +1,20 @@
+.titleCheckout {
+    color: pink;
+}
+
+.botones{
+    color:violet
+}
+
+.container{
+        margin-left: 100px;
+        margin-right: 0px;
+        border: 1px solid pink;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items:center;
+        
+}
+
+

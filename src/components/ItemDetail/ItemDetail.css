@@ -1,0 +1,30 @@
+
+.arrowcolor{
+    color: pink;
+}
+
+.linkVolver{
+    color:pink;
+}
+
+.links{
+    color:whitesmoke;
+    background-color: pink;
+}
+.links:hover{
+    color:whitesmoke;
+    background-color: violet;
+}
+.pics{
+    border: 1px solid pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    }
+
+.title {
+    text-align: center;
+    color: pink;
+    margin-top: 10px;
+}
